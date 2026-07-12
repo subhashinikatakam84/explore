@@ -41,6 +41,7 @@ public class InMemoryPriceService implements PriceService, AutoCloseable {
             logger.log(Level.SEVERE, "Batch already exists ", batchId);
             throw new IllegalStateException("Batch already exists: " + batchId);
         }
+        logger.info("Entered into processOrder method for ID: {}");
         logger.log(Level.INFO, "Batch {0} is starting ", batchId);
     }
 

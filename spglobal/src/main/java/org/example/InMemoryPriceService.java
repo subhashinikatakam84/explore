@@ -44,6 +44,9 @@ public class InMemoryPriceService implements PriceService, AutoCloseable {
         logger.info("Entered into processOrder method for ID: {}");
         logger.info(" after Entered into processOrder method for ID: {}");
         logger.info(" third Entered into processOrder method for ID: {}");
+        logger.info(" fourth Entered into processOrder method for ID: {}");
+
+
 
         logger.log(Level.INFO, "Batch {0} is starting ", batchId);
     }

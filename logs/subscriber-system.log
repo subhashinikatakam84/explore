@@ -1,0 +1,83 @@
+2026-07-13 19:38:50.890  INFO 9064 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 18.0.2 with PID 9064 (C:\subha\demo\target\classes started by Ashok in C:\subha\demo)
+2026-07-13 19:38:50.900 DEBUG 9064 --- [main] com.example.demo.DemoApplication         : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-07-13 19:38:50.902  INFO 9064 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-07-13 19:38:51.606  INFO 9064 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-13 19:38:51.657  INFO 9064 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interface.
+2026-07-13 19:38:52.223  INFO 9064 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-07-13 19:38:52.238  INFO 9064 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-13 19:38:52.240  INFO 9064 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-07-13 19:38:52.285  INFO 9064 --- [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1328 ms
+2026-07-13 19:38:52.452  INFO 9064 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-13 19:38:52.528  INFO 9064 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-07-13 19:38:53.007  INFO 9064 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-13 19:38:53.062  INFO 9064 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-13 19:38:53.253  INFO 9064 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-07-13 19:38:53.255  INFO 9064 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-13 19:38:53.277  WARN 9064 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-13 19:38:53.294  INFO 9064 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:testdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: TESTDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-13 19:38:53.904 DEBUG 9064 --- [main] org.hibernate.SQL                        : create global temporary table HTE_price(Id integer, rn_ integer not null, asOf timestamp(6), price float(53), primary key (rn_)) transactional
+2026-07-13 19:38:54.013  INFO 9064 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-13 19:38:54.037 DEBUG 9064 --- [main] org.hibernate.SQL                        : create table price (id integer not null, as_of timestamp(6), price float(53), primary key (id))
+2026-07-13 19:38:54.039 DEBUG 9064 --- [main] org.hibernate.SQL                        : create table subscriber (sid integer not null, saddr varchar(255), sname varchar(255), primary key (sid))
+2026-07-13 19:38:54.041 DEBUG 9064 --- [main] org.hibernate.SQL                        : create sequence price_seq start with 1 increment by 50
+2026-07-13 19:38:54.042  INFO 9064 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-13 19:38:54.145  INFO 9064 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-13 19:38:54.305  WARN 9064 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-13 19:38:54.560  INFO 9064 --- [main] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-07-13 19:38:54.629  INFO 9064 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-07-13 19:38:54.634  INFO 9064 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 4.183 seconds (process running for 13.302)
+2026-07-13 19:58:04.641  INFO 9064 --- [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-13 19:58:04.667  INFO 9064 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-13 19:58:04.670  INFO 9064 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-13 19:58:04.672  INFO 9064 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-13 19:58:04.674  INFO 9064 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-13 19:58:08.232  INFO 38628 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 18.0.2 with PID 38628 (C:\subha\demo\target\classes started by Ashok in C:\subha\demo)
+2026-07-13 19:58:08.237 DEBUG 38628 --- [main] com.example.demo.DemoApplication         : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-07-13 19:58:08.238  INFO 38628 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-07-13 19:58:08.802  INFO 38628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-13 19:58:08.861  INFO 38628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interface.
+2026-07-13 19:58:09.277  INFO 38628 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-07-13 19:58:09.290  INFO 38628 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-13 19:58:09.291  INFO 38628 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-07-13 19:58:09.332  INFO 38628 --- [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1037 ms
+2026-07-13 19:58:09.478  INFO 38628 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-13 19:58:09.516  INFO 38628 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-07-13 19:58:09.915  INFO 38628 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-13 19:58:09.965  INFO 38628 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-13 19:58:10.116  INFO 38628 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-07-13 19:58:10.118  INFO 38628 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-13 19:58:10.134  WARN 38628 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-13 19:58:10.151  INFO 38628 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:testdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: TESTDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-13 19:58:10.624 DEBUG 38628 --- [main] org.hibernate.SQL                        : create global temporary table HTE_price(Id integer, rn_ integer not null, asOf timestamp(6), price float(53), primary key (rn_)) transactional
+2026-07-13 19:58:10.708  INFO 38628 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-13 19:58:10.726 DEBUG 38628 --- [main] org.hibernate.SQL                        : create table price (id integer not null, as_of timestamp(6), price float(53), primary key (id))
+2026-07-13 19:58:10.727 DEBUG 38628 --- [main] org.hibernate.SQL                        : create table subscriber (sid integer not null, saddr varchar(255), sname varchar(255), primary key (sid))
+2026-07-13 19:58:10.730 DEBUG 38628 --- [main] org.hibernate.SQL                        : create sequence price_seq start with 1 increment by 50
+2026-07-13 19:58:10.731  INFO 38628 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-13 19:58:10.814  INFO 38628 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-13 19:58:10.956  WARN 38628 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-13 19:58:11.217  INFO 38628 --- [main] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-07-13 19:58:11.275  INFO 38628 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-07-13 19:58:11.282  INFO 38628 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 3.549 seconds (process running for 3.944)
